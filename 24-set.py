@@ -136,3 +136,21 @@ print(setC)
 setC = {11,22,33,44}
 setC.update("neel")
 print(setC)
+
+print("---------------------------------")
+setD = {11,12,13,14,15,16}
+setE=setD            #reference 
+setD.update({'a','b'})
+print(setD)     
+print(setE)
+
+print("---------------------------------")
+setD = {11,12,13,14,15,16}
+setE=setD.copy()            #new memory
+setD.update({'a','b'})
+print(setD)     
+print(setE)
+
+print("---------------------------------")
+setD = {11,12,13,14,15,16}
+
