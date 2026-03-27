@@ -46,3 +46,43 @@ setB={11,33,55,66,77}
 setA.symmetric_difference_update(setB)
 print(setA)
 print(setB)
+
+
+# isdisjoint() - Checks if two sets have NO common elements.
+# issuperset() - A set is a superset if it contains all elements of another set.
+# issubset() - A set is a subset if ALL its elements are in another set.
+# union() - Returns a new set with all elements from both sets.
+# discard() - Removes an element from the set.
+# ✔ discard() does NOT give error if the element is missing.
+# ❌ remove() gives an error if element is not found.
+print("--------------------------")
+setA={"a","b","c"}
+setB={11,33,55,66,77}
+
+print(setA.isdisjoint(setB))
+
+print("--------------------------")
+setA={"a","b","c",11,33,55,66,77}
+setB={11,33,55,66,77}
+
+print(setB.issuperset(setA))
+print(setA.issuperset(setB))  #True
+
+print(setB.issubset(setA))
+
+print("--------------------------")
+setA={"a","b","c",11,33}
+setB={1,2,3,4,5}
+print(setA.union(setB))
+
+
+#discard() - Removes an element from the set.
+setA={"a","b","c",11,33}
+setA.discard("a")
+print(setA)
+
+setA.discard("z")
+print(setA)
+
+setA.remove("z")
+print(setA)
