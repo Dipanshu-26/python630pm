@@ -60,3 +60,54 @@ def greet(name):
 print(greet("dipanshu"))
 
 #list as parameter and list as return type
+
+city=["pune","nagpur","amravati","mumbai","nashik"]
+
+def addCity(cityList,cityName):
+    cityList.append(cityName)
+    return cityList
+
+print(city)
+city2 = addCity(city,"nanded")
+print(city2)
+
+#dict as parameter and as return type
+info={
+    "name" : "dipanshu",
+    "lname" : "chawde"
+}
+
+def addCityy(info):
+    info['city'] = "pune"
+    return info
+
+print(info)
+info2=addCityy(info)
+print(info2)
+print(info)
+
+#tuple as parameter and tuple as returntype
+numbers = (11,22,33)
+def addToTuple(tupA):
+    tupA = list(tupA)     #tuple is converted in list
+    tupA.append(55)       #new element added to list
+    tupA= tuple(tupA)     # list is converted in tuple
+    return tupA
+
+print(numbers)
+finalTuple = addToTuple(numbers)
+print(finalTuple)
+print(numbers)
+
+# set as parameter and set as return tupy
+
+setA={1,2,3,4,5}
+def addToSet(setB):
+    setB.add(66)
+    return setB
+
+print(setA)
+
+setF = addToSet(setA)
+print(setF)
+print(setA)
