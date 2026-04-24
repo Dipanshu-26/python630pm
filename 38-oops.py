@@ -129,3 +129,53 @@ adi3.lname = "masalkar3"
 adi3.displayName()
 print(adi3.fname)
 print(adi3.lname)
+
+print("--------------------------------------------")
+#program 4
+#class level variable 
+
+class Bank:
+    #class level variable
+    country = "India"
+
+    def __init__(self, fn, accNo,bal):
+        self.fname = fn
+        self.accountNo = accNo
+        self.balance = bal
+
+    def deposit(self,amount):
+        self.balance = self.balance + amount  
+        return self.balance
+
+    def withdrawl(self,amount):
+        if amount < self.balance:
+            self.balance = self.balance-amount
+            return self.balance
+        else:
+            return "Insufficient balance"  
+
+
+
+dip = Bank("dipanshu",1234,10000)
+print(dip.fname)
+print(dip.balance)
+print(dip.accountNo)
+print(dip.country)
+newBal = dip.withdrawl(15000)
+print(newBal)
+
+
+newBal = dip.deposit(10000)
+print(newBal)
+print("--------------------------------------------")
+adi = Bank("aditya",6666,50000)
+print(adi.fname)
+print(adi.balance)
+print(adi.accountNo)
+print(adi.country)
+newBal = adi.withdrawl(15000)
+print(newBal)
+
+
+newBal = adi.deposit(10000)
+print(newBal)
